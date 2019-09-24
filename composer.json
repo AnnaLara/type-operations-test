@@ -1,0 +1,17 @@
+{
+  "require-dev": {
+    "phpunit/phpunit": "^8.2",
+    "friendsofphp/php-cs-fixer" : "*",
+    "php-di/php-di": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Operations\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  }
+}
