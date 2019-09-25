@@ -36,4 +36,12 @@ class AddTest extends TestCase
         $add = new Add();
         $add->__invoke('notANumber', 1);
     }
+
+    /** @test */
+    public function boolParameter()
+    {
+        $this->expectException(WrongTypeException::class);
+        $add = new Add();
+        $add->__invoke(3, true);
+    }
 }

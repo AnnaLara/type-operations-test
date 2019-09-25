@@ -1,8 +1,7 @@
 {
   "require-dev": {
     "phpunit/phpunit": "^8.2",
-    "friendsofphp/php-cs-fixer" : "*",
-    "php-di/php-di": "^6.0"
+    "friendsofphp/php-cs-fixer": "*"
   },
   "autoload": {
     "psr-4": {

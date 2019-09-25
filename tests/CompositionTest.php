@@ -3,6 +3,8 @@
 namespace Tests;
 
 use Operations\Composition;
+use Operations\Add;
+use Operations\Subtract;
 use Operations\WrongTypeException;
 use PHPUnit\Framework\TestCase;
 
@@ -11,14 +13,14 @@ class CompositionTest extends TestCase
     /** @test */
     public function firstCase()
     {
-        $newOperation = new Composition();
+        $newOperation = new Composition(new Add(), new Subtract());
         $this->assertEquals((1 + 2 - 3) / 2, $newOperation->__invoke(1, 2, 3));
     }
 
     /** @test */
     public function secondCase()
     {
-        $newOperation = new Composition();
+        $newOperation = new Composition(new Add(), new Subtract());
         $this->assertEquals((5 + 3 - 6) / 2, $newOperation->__invoke(5, 3, 6));
     }
 
@@ -26,7 +28,8 @@ class CompositionTest extends TestCase
     public function wrongParameter()
     {
         $this->expectException(WrongTypeException::class);
-        $add = new Composition();
-        $add->__invoke('notANumber', 1, 0);
+        $newOperation = new Composition(new Add(), new Subtract());
+        $newOperation->__invoke('notANumber', 1, 0);
     }
+
 }

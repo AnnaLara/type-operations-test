@@ -41,4 +41,14 @@ class SubtractTest extends TestCase
         $subtract = new Subtract();
         $subtract->__invoke('notANumber', 1);
     }
+
+    /** @test */
+    public function boolParameter()
+    {
+        $this->expectException(WrongTypeException::class);
+        $subtract = new Subtract();
+        $subtract->__invoke(3, true);
+    
+    }
+
 }

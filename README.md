@@ -1,17 +1,18 @@
-# type-operations-test
+# type-operations
 
-## La evaluación
+The code implements basic Math operations such as add, subtract and composition of two binary operations.
 
-El objetivo de esta prueba es comprobar un mínimo de conocimientos básicos de PHP en lo relativo a sintaxis y semántica.
+## Installation
 
-Para completar la prueba de forma satisfactoria se tendrán que ejecutar los tests del proyecto (situados en la carpeta "tests") pasando todos los requerimientos.
+1. Install composer following the instructions:
+   (https://getcomposer.org/download/)[https://getcomposer.org/download/]
 
-Pueden (y deben) ser agregados todos los ficheros y clases necesarias y complementarias sin limitación alguna. Pueden ser utilizados todos los recursos propios o externos que se consideren oportunos. La estructura del proyecto puede ser modificada si fuera necesario para una mejor comprensión si se necesitara. Se pueden modificar y añadir tests para mejorar la fiabilidad del código y eliminar comprobaciones innecesarias según cambie la implementación.
+2. Run `composer install`to install necessary dependencies
 
-Se valorará ante todo la forma en la que se resuelve el problema: estructura y organización del código, uso correcto de la sintaxis, reutilización de código y buenas prácticas. 
+## Tests
 
-## El problema
+Run `vendor/bin/phpunit tests`to run tests
 
-El problema consiste en crear una serie de servicios que sustituyan a las operaciones aritméticas más básicas, como son la suma y la resta. Estos servicios harán las comprobaciones necesarias para que se asegure un buen funcionamiento sin errores. Se valorará el uso de la sintaxis de PHP para evitar comprobaciones manuales.
+### Note:
 
-La última de las operaciones (Composition) se deberá apoyar en las operaciones previamente implementadas. El nombre de esta operación da una sutil pista sobre cómo debe de ser implementada.
+As the project is small, I have used manual dependency injection control for Composition component. For bigger project the use of PHP-DI is a good idea.
