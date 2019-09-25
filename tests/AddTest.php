@@ -44,4 +44,12 @@ class AddTest extends TestCase
         $add = new Add();
         $add->__invoke(3, true);
     }
+
+    /** @test */
+    public function floatParameter()
+    {
+        $this->expectException(WrongTypeException::class);
+        $add = new Add();
+        $add->__invoke(3, 1.5);
+    }
 }

@@ -48,7 +48,14 @@ class SubtractTest extends TestCase
         $this->expectException(WrongTypeException::class);
         $subtract = new Subtract();
         $subtract->__invoke(3, true);
-    
+    }
+
+    /** @test */
+    public function floatParameter()
+    {
+        $this->expectException(WrongTypeException::class);
+        $add = new Subtract();
+        $add->__invoke(3, 1.5);
     }
 
 }
