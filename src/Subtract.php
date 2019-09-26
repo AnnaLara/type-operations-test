@@ -4,12 +4,8 @@ namespace Operations;
 
 class Subtract implements BinaryOperation
 {
-    public function __invoke($x, $y)
+    public function __invoke(int $x, int $y)
     {
-        if (is_numeric($x) && is_numeric($y)) {
-            return $x - $y;
-        } else {
-            throw new WrongTypeException();
-        }
+        return $x - $y;
     }
 }

@@ -27,7 +27,7 @@ class CompositionTest extends TestCase
     /** @test */
     public function wrongParameter()
     {
-        $this->expectException(WrongTypeException::class);
+        $this->expectException(\TypeError::class);
         $newOperation = new Composition(new Add(), new Subtract());
         $newOperation->__invoke('notANumber', 1, 0);
     }

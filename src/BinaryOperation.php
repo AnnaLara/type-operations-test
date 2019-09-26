@@ -4,6 +4,5 @@ namespace Operations;
 
 interface BinaryOperation
 {
-    public function __invoke($x, $y);
+    public function __invoke(int $x, int $y);
 };
-
