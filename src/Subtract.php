@@ -6,7 +6,7 @@ class Subtract implements BinaryOperation
 {
     public function __invoke($x, $y)
     {
-        if (is_numeric($x) && is_numeric($y)) {
+        if (is_integer($x) && is_integer($y)) {
             return $x - $y;
         } else {
             throw new WrongTypeException();
